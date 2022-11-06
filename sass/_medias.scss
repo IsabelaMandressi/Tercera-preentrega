@@ -1,23 +1,41 @@
 @media screen and (min-width: 500px){
     .linksDirectos{
-        width: 100%;
-        display: flex; 
-        flex-direction: row;
-        align-items: center;
+        grid-template-columns: repeat(3, 1fr);
     }
     .panuelosButton, .printsButton, .totesButton{
-        margin:2em;
-        margin-bottom: 5em;
+        box-sizing: content-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0em;
+    }
+    .totesButton{
+        margin-top: 2em;
+        margin-left: 0.2em;
+    }
+    .panuelosButton{
+        margin-right: 0em;
+    }
+    .printsButton{
+        margin-left: 0.5em;
     }
     .toteBagImg, .panuelosImg {
         width: 13em;
         height: 16.2em;
         }
-    .paperCatalogue, .toteCatalogue, .panueloCatalogue{
+    .serieBrote, .toteCatalogue, .panueloCatalogue, .polerasCatalogue, .serieSalitre, .serieLejos{
         display:grid;
         grid-template-columns:repeat(2, 1fr)
     }
-    p, .pricesList{
+    .serieBrote, .serieLejos, .serieSalitre{
+        img{
+            margin: 0.3em;
+            width: 15em;
+            height: 10em;
+        }
+    }
+    p{
         font-size: 1.2em;
     }
     h1{
@@ -34,17 +52,38 @@
         width: 15em;
     }
 }
-@media screen and (min-width: 900px){
+@media screen and (min-width: 700px){
+    .serieBrote, .serieLejos, .serieSalitre{
+        img{
+            margin: 0.5em;
+            width: 20em;
+            height: 13em;
+        }  
+    }
+}
+@media screen and (min-width: 768px){
     .toteBagImg, .panuelosImg {
         width: 17em;
         height: 21.2em;
         }
-    .printsImg{
-        width: 17em;
-        height: 11.3em;
-    }
-    .paperCatalogue, .toteCatalogue, .panueloCatalogue{
+.toteCatalogue, .panueloCatalogue, .polerasCatalogue{
         display:grid;
         grid-template-columns:repeat(3, 1fr)
+    }
+    .panuelosButton:hover{
+        background-image: url(../img/panuelosHover.jpg);
+    }
+    .totesButton:hover{
+        background-image: url(../img/toteBagsHover.jpg);
+    }
+    .printsButton:hover{
+        background-image: url(../img/printsHover.jpg);
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .serieBrote, .serieLejos, .serieSalitre{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
     }
 }

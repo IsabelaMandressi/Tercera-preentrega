@@ -11,74 +11,78 @@
 <body>
     <div class="grillaGeneral">
         <header> 
-            <img src="../img/banner.png" alt="header" class="headerImg">
-        </header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light barraNavegacion">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotres.html">Nosotrxs</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Fotografía
-                            </a>
-                            <ul class="dropdown-menu desplegable" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="fotografiaPapel.html">Impresión en papel</a></li>
-                                <li><a class="dropdown-item" href="fotografiaTela.html">Impresión en tela</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active " href="contacto.html" >Contacto</a>
-                        </li>
-                    </ul>
-                    <div class="buscador">
-                        <div class="dropdown">
-                            <a class="btn btn-ligth dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            Buscar
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="./secciones/fotografiaPapel.html">Prints</a></li>
-                            <li><a class="dropdown-item" href="./secciones/fotografiaPapel.html">Imanes</a></li>
-                            <li><a class="dropdown-item" href="./secciones/fotografiaPapel.html">Stickers</a></li>
-                            <li><a class="dropdown-item" href="./secciones/fotografiaTela.html">Tote bags</a></li>
-                            <li><a class="dropdown-item" href="./secciones/fotografiaTela.html">Pañuelos de seda</a></li>
-                            </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-black barraNavegacion">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/logo.jpg" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="nosotres.html">Nosotrxs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Fotografía
+                                </a>
+                                <ul class="dropdown-menu desplegable" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="fotografiaPapel.html">Impresión en papel</a></li>
+                                    <li><a class="dropdown-item" href="fotografiaTela.html">Impresión en tela</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html" >Contacto</a>
+                            </li>
+                        </ul>
+                        <div class="buscador">
+                            <div class="dropdown">
+                                <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                Buscar
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="fotografiaPapel.html">Prints</a></li>
+                                <li><a class="dropdown-item" href="fotografiaPapel.html">Imanes</a></li>
+                                <li><a class="dropdown-item" href="fotografiaPapel.html">Stickers</a></li>
+                                <li><a class="dropdown-item" href="fotografiaTela.html">Tote bags</a></li>
+                                <li><a class="dropdown-item" href="fotografiaTela.html">Pañuelos de seda</a></li>
+                                </ul>
+                            </div>
                         </div>
+                    </div>        
+                </div>
+            </nav> 
+            <img src="../img/prints.jpg" alt="encabezado"class="encabezado">
+        </header>
+        <main>
+            <div class="cuerpoContacto">
+                <h1>Contactate con nosotrxs</h1>
+                <form>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput">Nombre</label>
+                        <input type="text" class="form-control" id="formGroupInputOne" placeholder="Nombre">
                     </div>
-                </div>        
+                    <div class="form-group">
+                        <label for="formGroupExampleInput2">Apellido</label>
+                        <input type="text" class="form-control" id="formGroupInputTwo" placeholder="Apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput3">Email</label>
+                        <input type="text" class="form-control" id="formGroupInputThree" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="formGroupExampleInput4">Mensaje</label>
+                        <input type="text" class="form-control" id="formGroupInputFour" placeholder="Mensaje">
+                    </div>
+                    <button type="submit" class="btn btn-dark">Enviar</button>
+                </form>
             </div>
-        </nav>
-        <main class="cuerpoContacto">
-            <h1>Contactate con nosotrxs</h1>
-            <form>
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Nombre</label>
-                    <input type="text" class="form-control" id="formGroupInputOne" placeholder="Nombre">
-                </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput2">Apellido</label>
-                    <input type="text" class="form-control" id="formGroupInputTwo" placeholder="Apellido">
-                </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput3">Email</label>
-                    <input type="text" class="form-control" id="formGroupInputThree" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput4">Mensaje</label>
-                    <input type="text" class="form-control" id="formGroupInputFour" placeholder="Mensaje">
-                </div>
-                <button type="submit" class="btn btn-dark">Enviar</button>
-            </form>
         </main>
         <footer>
             <section class="redes">

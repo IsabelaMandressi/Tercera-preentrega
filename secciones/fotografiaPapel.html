@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Impresión de fotografías en papel">
+    <meta name="keywords" content="fotografía, prints, arte, decoración, arte gráfico">
     <title>Impresión en papel</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../estilos/style.css">
@@ -11,160 +13,256 @@
 <body>
     <div class="grillaGeneral">
         <header> 
-            <img src="../img/banner.png" alt="header" class="headerImg">
-        </header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light barraNavegacion">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="nosotres.html">Nosotrxs</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Fotografía
-                            </a>
-                            <ul class="dropdown-menu desplegable" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item active" href="fotografiaPapel.html">Impresión en papel</a></li>
-                                <li><a class="dropdown-item" href="fotografiaTela.html">Impresión en tela</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="contacto.html" >Contacto</a>
-                        </li>
-                    </ul>
-                    <div class="buscador">
-                        <div class="dropdown">
-                            <a class="btn btn-ligth dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            Buscar
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="./secciones/fotografiaPapel.html">Prints</a></li>
-                            <li><a class="dropdown-item" href="./secciones/fotografiaPapel.html">Imanes</a></li>
-                            <li><a class="dropdown-item" href="./secciones/fotografiaPapel.html">Stickers</a></li>
-                            <li><a class="dropdown-item" href="./secciones/fotografiaTela.html">Tote bags</a></li>
-                            <li><a class="dropdown-item" href="./secciones/fotografiaTela.html">Pañuelos de seda</a></li>
-                            </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-black barraNavegacion">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/logo.jpg" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="nosotres.html">Nosotrxs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Fotografía
+                                </a>
+                                <ul class="dropdown-menu desplegable" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="fotografiaPapel.html">Impresión en papel</a></li>
+                                    <li><a class="dropdown-item" href="fotografiaTela.html">Impresión en tela</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                            <a class="nav-link" href="contacto.html" >Contacto</a>
+                            </li>
+                        </ul>
+                        <div class="buscador">
+                            <div class="dropdown">
+                                <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                Buscar
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item" href="fotografiaPapel.html">Prints</a></li>
+                                <li><a class="dropdown-item" href="fotografiaPapel.html">Imanes</a></li>
+                                <li><a class="dropdown-item" href="fotografiaPapel.html">Stickers</a></li>
+                                <li><a class="dropdown-item" href="fotografiaTela.html">Tote bags</a></li>
+                                <li><a class="dropdown-item" href="fotografiaTela.html">Pañuelos de seda</a></li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                </div>        
+                    </div>        
+                </div>
+            </nav> 
+            <img src="../img/prints.jpg" alt="encabezado"class="encabezado">
+        </header>
+        <main>
+            <div class="cuerpoPapel">
+                <h1 class="impresionEnPapelTitle">Impresión en papel</h1>
+                <p>Todas las fotos a continuación se pueden encargar como pegotines de 5x7cm con lámina protectora, imanes de 5x7cm con lámina protectora o prints del tamaño que sea (20x30cm tamaño estándar) en papel lutre.</p>
+                <h3>Precios</h3>
+                <ul class="pricesList">
+                    <li>
+                        Sticker $30
+                    </li>
+                    <li>
+                        Imán $40
+                    </li>
+                    <li>
+                        Print estándar 20x30cm $490
+                    </li>
+                </ul>
+                <section class="paperCatalogue">
+                    <h1>SERIE BROTE</h1>
+                    <h2> -Los pastizales florecen en primavera-</h2>
+                    <section class="serieBrote">
+                        <div>
+                            <img src="../img/broteOne.jpg" alt="broteOne">
+                        </div>
+                        <div>
+                            <img src="../img/broteTwo.jpg" alt="broteTwo">
+                        </div>
+                        <div>
+                            <img src="../img/broteThree.jpg" alt="broteThree">
+                        </div>
+                        <div>
+                            <img src="../img/broteFour.jpg" alt="broteFour">
+                        </div>
+                        <div>
+                            <img src="../img/broteFive.jpg" alt="broteFive">
+                        </div>
+                        <div>
+                            <img src="../img/broteSeven.jpg" alt="broteSeven">
+                        </div>
+                        <div>
+                            <img src="../img/broteEight.jpg" alt="broteEight">
+                        </div>
+                        <div>
+                            <img src="../img/broteNine.jpg" alt="broteNine">
+                        </div>
+                        <div>
+                            <img src="../img/broteTen.jpg" alt="broteTen">
+                        </div>
+                    </section>
+                    <h1>SERIE SALITRE</h1>
+                    <h2> -El mar es mi lugar favortito-</h2>
+                    <section class="serieSalitre">
+                        <div>
+                            <img src="../img/salitreOne.jpg" alt="salitreOne">
+                        </div>
+                        <div>
+                            <img src="../img/salitreTwo.jpg" alt="salitreTwo">
+                        </div>
+                        <div>
+                            <img src="../img/salitreThree.jpg" alt="salitreThree">
+                        </div>
+                        <div>
+                            <img src="../img/salitreFour.jpg" alt="salitreFour">
+                        </div>
+                        <div>
+                            <img src="../img/salitreFive.jpg" alt="salitreFive">
+                        </div>
+                        <div>
+                            <img src="../img/salitreSix.jpg" alt="salitreSix">
+                        </div>
+                        <div>
+                            <img src="../img/salitreSeven.jpg" alt="salitreSeven">
+                        </div>
+                        <div>
+                            <img src="../img/salitreEight.jpg" alt="salitreEight">
+                        </div>
+                        <div>
+                            <img src="../img/salitreNine.jpg" alt="salitreNine">
+                        </div>
+                        <div>
+                            <img src="../img/salitreTen.jpg" alt="salitreTen">
+                        </div>
+                        <div>
+                            <img src="../img/salitreEleven.jpg" alt="salitreEleven">
+                        </div>
+                        <div>
+                            <img src="../img/salitreTwelve.jpg" alt="salitreTwelve">
+                        </div>
+                        <div>
+                            <img src="../img/salitreThirteen.jpg" alt="salitreThirteen">
+                        </div>
+                        <div>
+                            <img src="../img/salitreFourteen.jpg" alt="salitreFourteen">
+                        </div>
+                    </section>
+                    <h1>SERIE LEJOS DE CASA</h1>
+                    <h2> -El hogar lo llevo tatuado en la piel-</h2>
+                    <section class="serieLejos">
+                        <div>
+                            <img src="../img/lejosOne.jpg" alt="lejosOne">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwo.jpg" alt="lejosTwo">
+                        </div>
+                        <div>
+                            <img src="../img/lejosThree.jpg" alt="lejosThree">
+                        </div>
+                        <div>
+                            <img src="../img/lejosFour.jpg" alt="lejosFour">
+                        </div>
+                        <div>
+                            <img src="../img/lejosFive.jpg" alt="lejosFive">
+                        </div>
+                        <div>
+                            <img src="../img/lejosSix.jpg" alt="lejosSix">
+                        </div>
+                        <div>
+                            <img src="../img/lejosSeven.jpg" alt="lejosSeven">
+                        </div>
+                        <div>
+                            <img src="../img/lejosEight.jpg" alt="lejosEight">
+                        </div>
+                        <div>
+                            <img src="../img/lejosNine.jpg" alt="lejosNine">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTen.jpg" alt="lejosTen">
+                        </div>
+                        <div>
+                            <img src="../img/lejosEleven.jpg" alt="lejosEleven">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwelve.jpg" alt="lejosTwelve">
+                        </div>
+                        <div>
+                            <img src="../img/lejosThirteen.jpg" alt="lejosThirteen">
+                        </div>
+                        <div>
+                            <img src="../img/lejosFourteen.jpg" alt="lejosFourteen">
+                        </div>
+                        <div>
+                            <img src="../img/lejosFifteen.jpg" alt="lejosFifteen">
+                        </div>
+                        <div>
+                            <img src="../img/lejosSixteen.jpg" alt="lejosSixteen">
+                        </div>
+                        <div>
+                            <img src="../img/lejosSeventeen.jpg" alt="lejosSeventeen">
+                        </div>
+                        <div>
+                            <img src="../img/lejosEighteen.jpg" alt="lejosEighteen">
+                        </div>
+                        <div>
+                            <img src="../img/lejosNineteen.jpg" alt="lejosNineteen">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwenty.jpg" alt="lejosTwenty">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwentyOne.jpg" alt="lejosTwentyOne">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwentyTwo.jpg" alt="lejosTwentyTwo">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwentyThree.jpg" alt="lejosTwentyThree">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwentyFour.jpg" alt="lejosTwentyFour">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwentyFive.jpg" alt="lejosTwentyFive">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwentySix.jpg" alt="lejosTwentySix">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwentySeven.jpg" alt="lejosTwentySeven">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwentyEight.jpg" alt="lejosTwentyEight">
+                        </div>
+                        <div>
+                            <img src="../img/lejosTwentyNine.jpg" alt="lejosTwentyNine">
+                        </div>
+                        <div>
+                            <img src="../img/lejosThirty.jpg" alt="lejosThirty">
+                        </div>
+                        <div>
+                            <img src="../img/lejosThirtyOne.jpg" alt="lejosThirtyOne">
+                        </div>
+                        <div>
+                            <img src="../img/lejosThirtyTwo.jpg" alt="lejosThirtyTwo">
+                        </div>
+                        <div>
+                            <img src="../img/lejosThirtyThree.jpg" alt="lejosThirtyThree">
+                        </div>
+                        <div>
+                            <img src="../img/lejosThirtyFour.jpg" alt="lejosThirtyFour">
+                        </div>
+                </section>
             </div>
-        </nav>
-        <main class="cuerpoPapel">
-            <h1 class="impresionEnPapelTitle">Impresión en papel</h1>
-            <p>Todas las fotos a continuación se pueden encargar como pegotines de 5x7cm con lámina protectora, imanes de 5x7cm con lámina protectora o prints del tamaño que sea (20x30cm tamaño estándar) en papel silk.</p>
-            <h3>Precios</h3>
-            <ul class="pricesList">
-                <li>
-                    Sticker $25
-                </li>
-                <li>
-                    Imán $40
-                </li>
-                <li>
-                    Print estándar 20x30cm papel silk $490
-                </li>
-            </ul>
-            <section class="paperCatalogue">
-                <div>
-                    <img src="../img/one.JPG" alt="one">
-                </div>
-                <div>
-                    <img src="../img/two.jpg" alt="two">
-                </div>
-                <div>
-                    <img src="../img/three.jpg" alt="three">
-                </div>
-                <div>
-                    <img src="../img/four.jpg" alt="four">
-                </div>
-                <div>
-                    <img src="../img/five.jpg" alt="five">
-                </div>
-                <div>
-                    <img src="../img/six.jpg" alt="six">
-                </div>
-                <div>
-                    <img src="../img/seven.JPG" alt="seven">
-                </div>
-                <div>
-                    <img src="../img/eight.JPG" alt="eight">
-                </div>
-                <div>
-                    <img src="../img/nine.JPG" alt="nine">
-                </div>
-                <div>
-                    <img src="../img/ten.JPG" alt="ten">
-                </div>
-                <div>
-                    <img src="../img/eleven.JPG" alt="eleven">
-                </div>
-                <div>
-                    <img src="../img/twelve.JPG" alt="twelve">
-                </div>
-                <div>
-                    <img src="../img/thirteen.JPG" alt="thirteen">
-                </div>
-                <div>
-                    <img src="../img/fourteen.JPG" alt="fourteen">
-                </div>
-                <div>
-                    <img src="../img/fifteen.jpg" alt="fiteen">
-                </div>
-                <div>
-                    <img src="../img/sixteen.JPG" alt="sixteen">
-                </div>
-                <div>
-                    <img src="../img/seventeen.JPG" alt="seventeen">
-                </div>
-                <div>
-                    <img src="../img/eighteen.JPG" alt="eighteen">
-                </div>
-                <div>
-                    <img src="../img/nineteen.JPG" alt="nineteen">
-                </div>
-                <div>
-                    <img src="../img/twenty.jpg" alt="twenty">
-                </div>
-                <div>
-                    <img src="../img/twentyOne.jpg" alt="twentyOne">
-                </div>
-                <div>
-                    <img src="../img/twentyTwo.jpg" alt="twentyTwo">
-                </div>
-                <div>
-                    <img src="../img/twentyThree.JPG" alt="twentyThree">
-                </div>
-                <div>
-                    <img src="../img/twentyFour.jpg" alt="twentyFour">
-                </div>
-                <div>
-                    <img src="../img/twentyFive.jpg" alt="twentyFive">
-                </div>
-                <div>
-                    <img src="../img/twentySix.jpg" alt="twentySix">
-                </div>
-                <div>
-                    <img src="../img/twentySeven.jpg" alt="twentySeven">
-                </div>
-                <div>
-                    <img src="../img/twentyEight.jpg" alt="twentyEight">
-                </div>
-                <div>
-                    <img src="../img/twentyNine.jpg" alt="twentyNine">
-                </div>
-                <div>
-                    <img src="../img/thirty.JPG" alt="thirty">
-                </div>
-            </section>
         </main>
         <footer>
             <section class="redes">

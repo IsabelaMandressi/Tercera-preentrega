@@ -12,8 +12,6 @@
     padding: 0;
 }
 body{
-    margin: 0;
-    padding:0;
     min-height: 100vh;  
     transition-property: all;
     transition-duration: 5s;
@@ -21,29 +19,43 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     header{
+        grid-area: encabezado;
         background-color: $fontColor;
         img{
             width:100%;
         }
     }
     nav{
-        display: flex;
+        grid-area: barraNavegacion;
+        background-color: black;
         width: 100%;
-    }
+        height: 6em;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        img{
+            width: 4em;
+            height:4em;
+        }
+        }
     main{    
         grid-area: main;
         h1{
             display: flex;
             flex-direction: row;
             justify-content: center;
-            margin-top: 20%;
-            color: $fontColor;
-            @include font(2.3em, $fontTitulo);
+            flex-wrap: wrap;
+            color:$tituloColor;
+            text-align: center;
+            @include font(3em, $fontTitulo);
         }
         h2{
             @include font(2em, $fontTitulo);
             padding-left: 0px;
             color: $fontColor;
+            text-align: center;
         }
         h3{
             font-family: $fontTitulo;
@@ -51,37 +63,50 @@ body{
             display: flex;
             flex-direction: row;
             justify-content: center;
+            text-align: center
         }
         p{
-            @include font(1.1em, $fontParrafo);
+            @include font(1.3em, $fontParrafo);
             color: $fontColor;
             text-align: justify;
             margin-left: 1em;
             margin-right: 1em;
             padding-bottom:1em;
-            margin-top: 1.3em;
+            margin-top: 1.3em;        
         }
     }
+    footer{
+        grid-area: pie;
+        background-color: black;
+        height: 4em;
+        margin-bottom: 0;
+        padding-top: 5em;
+        padding-bottom: 2em;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        .redes{
+            width: 2em;
+            height: 2em;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .copyright{
+            color: $fontColor;
+            font-size:0.6em;
+            font-family: $fontNav;
+        }
+    }       
 }
-
 a{
     text-decoration: none;
     font-size: 1em;
     font-family: $fontNav;
-    color:black
+    color:$fontColor;
 }
-
-header{
-    grid-area: encabezado;
-}
-nav{
-    grid-area: barraNavegacion;
-}
-
-footer{
-    grid-area: pie;
-}
-
 
 .grillaGeneral{
     display: grid;
@@ -91,27 +116,8 @@ footer{
     "main"
     "pie";
 }
-footer{
-    background-color: black;
-    height: 4em;
-    margin-bottom: 0;
-    padding-top: 5em;
-    padding-bottom: 2em;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    .redes{
-        width: 2em;
-        height: 2em;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    .copyright{
-        color: $fontColor;
-        font-size:0.6em;
-        font-family: $fontNav;
-    }
+.toteCatalogue, .panueloCatalogue, .paperCatalogue{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }

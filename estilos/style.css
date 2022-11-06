@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   min-height: 100vh;
   transition-property: all;
   transition-duration: 5s;
@@ -17,14 +16,26 @@ body {
   background-size: cover;
 }
 body header {
+  grid-area: encabezado;
   background-color: white;
 }
 body header img {
   width: 100%;
 }
 body nav {
-  display: flex;
+  grid-area: barraNavegacion;
+  background-color: black;
   width: 100%;
+  height: 6em;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+body nav img {
+  width: 4em;
+  height: 4em;
 }
 body main {
   grid-area: main;
@@ -33,9 +44,10 @@ body main h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: 20%;
-  color: white;
-  font-size: 2.3em;
+  flex-wrap: wrap;
+  color: palevioletred;
+  text-align: center;
+  font-size: 3em;
   font-family: "Oswald", sans-serif;
 }
 body main h2 {
@@ -43,6 +55,7 @@ body main h2 {
   font-family: "Oswald", sans-serif;
   padding-left: 0px;
   color: white;
+  text-align: center;
 }
 body main h3 {
   font-family: "Oswald", sans-serif;
@@ -50,9 +63,10 @@ body main h3 {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  text-align: center;
 }
 body main p {
-  font-size: 1.1em;
+  font-size: 1.3em;
   font-family: "Source Sans Pro", sans-serif;
   color: white;
   text-align: justify;
@@ -61,32 +75,8 @@ body main p {
   padding-bottom: 1em;
   margin-top: 1.3em;
 }
-
-a {
-  text-decoration: none;
-  font-size: 1em;
-  font-family: "Antonio", sans-serif;
-  color: black;
-}
-
-header {
-  grid-area: encabezado;
-}
-
-nav {
-  grid-area: barraNavegacion;
-}
-
-footer {
+body footer {
   grid-area: pie;
-}
-
-.grillaGeneral {
-  display: grid;
-  grid-template-areas: "encabezado" "barraNavegacion" "main" "pie";
-}
-
-footer {
   background-color: black;
   height: 4em;
   margin-bottom: 0;
@@ -98,25 +88,55 @@ footer {
   justify-content: center;
   align-items: center;
 }
-footer .redes {
+body footer .redes {
   width: 2em;
   height: 2em;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-footer .copyright {
+body footer .copyright {
   color: white;
   font-size: 0.6em;
   font-family: "Antonio", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1em;
+  font-family: "Antonio", sans-serif;
+  color: white;
+}
+
+.grillaGeneral {
+  display: grid;
+  grid-template-areas: "encabezado" "barraNavegacion" "main" "pie";
+}
+
+.toteCatalogue, .panueloCatalogue, .paperCatalogue {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
 
 .cuerpoIndex {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
-.cuerpoIndex .carruselInicio {
+.cuerpoIndex h1 {
+  padding: 1em;
+  margin-top: 0em;
+  margin-bottom: 2em;
+  padding-bottom: 0;
+  color: palevioletred;
+}
+.cuerpoIndex video {
+  width: 100%;
+  margin-top: 3em;
+}
+.cuerpoIndex section {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -125,15 +145,31 @@ footer .copyright {
   padding-right: 0%;
   margin-top: 5em;
 }
-.cuerpoIndex .parrafoIndex {
-  padding: 1em;
-  margin-top: 10em;
-  margin-bottom: 0;
-  padding-bottom: 0;
+.cuerpoIndex .carruselInicio {
+  margin-top: 2em;
+}
+.cuerpoIndex h2 {
+  color: palevioletred;
+  font-size: 3em;
+}
+.cuerpoIndex .cartel {
+  background-image: url("../img/salitreTwo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 3em;
+}
+.cuerpoIndex .cartel p {
+  color: palevioletred;
+  font-weight: bolder;
+  margin-bottom: 3em;
+  margin-top: 3em;
+}
+.cuerpoIndex .cartel p a {
+  color: black;
 }
 
 .panuelosButton, .printsButton, .totesButton {
-  width: 100%;
+  width: 95%;
   height: 15em;
   border-style: none;
   border-color: none;
@@ -143,39 +179,44 @@ footer .copyright {
 
 .linksDirectos {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(1);
 }
 .linksDirectos .printsButton {
   background-image: url("../img/prints.jpg");
   background-size: cover;
-  margin-top: 5em;
+  transition: background-image 2s;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 .linksDirectos .printsButton a {
-  color: white;
   font-size: 2em;
   font-family: "Oswald", sans-serif;
 }
 .linksDirectos .totesButton {
   background-image: url("../img/toteBags.JPG");
   background-size: cover;
+  transition: background-image 2s;
 }
 .linksDirectos .totesButton a {
-  color: white;
   font-size: 2em;
   font-family: "Oswald", sans-serif;
 }
 .linksDirectos .panuelosButton {
   background-image: url("../img/panuelos.jpg");
   background-size: cover;
-  margin-bottom: 5em;
+  transition: background-image 2s;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 .linksDirectos .panuelosButton a {
-  color: white;
   font-size: 2em;
   font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 .nosotresImg {
@@ -186,9 +227,16 @@ footer .copyright {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
   transition-property: all;
   transition-duration: 5s;
+}
+.nosotresImg p {
+  font-size: 0.8em;
+  padding: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .grillaNosotres {
@@ -205,11 +253,20 @@ footer .copyright {
   height: fit-content;
 }
 .grillaNosotres section p {
-  padding-left: 1em;
+  padding: 0%;
   width: 80%;
+  margin-bottom: 1em;
+  color: black;
+  font-weight: bold;
+}
+.grillaNosotres section .quienesSomosDescriptionOne {
+  margin-top: 1em;
+}
+.grillaNosotres section .quienesSomosDescriptionThree {
+  margin-bottom: 4em;
 }
 .grillaNosotres .quienesSomosImg {
-  width: 90%;
+  width: 70%;
   -o-border-image: none;
      border-image: none;
 }
@@ -219,17 +276,18 @@ footer .copyright {
   flex-direction: column;
   justify-content: center;
 }
+.cuerpoPapel h1 {
+  margin-top: 3em;
+}
 .cuerpoPapel ul {
-  font-family: "Oswald", sans-serif;
-  font-size: 0.8em;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
   text-align: justify;
   list-style-type: none;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 4.4em;
-  padding-left: 0;
 }
 
 .paperCatalogue {
@@ -238,13 +296,71 @@ footer .copyright {
   margin-top: 2em;
   margin-bottom: 2em;
 }
+.paperCatalogue h1 {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin-top: 2em;
+}
+.paperCatalogue h2 {
+  margin-bottom: 2em;
+}
+.paperCatalogue div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .paperCatalogue img {
-  width: 12em;
-  height: 8em;
+  width: 17em;
+  height: 11.3em;
   padding: 0;
   margin-left: 1em;
   margin-right: 1em;
   margin-bottom: 2em;
+  transition-property: all;
+  transition-duration: 5s;
+}
+.paperCatalogue .broteSix {
+  height: 22em;
+}
+
+.cuerpoTela .impresionEnTela {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.cuerpoTela .impresionEnTela h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.cuerpoTela .impresionEnTela p {
+  width: 80%;
+}
+.cuerpoTela h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.cuerpoTela .telaDescription {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.cuerpoTela .telaDescription p {
+  width: 80%;
+}
+.cuerpoTela section {
+  margin: 2em;
+}
+.cuerpoTela section img {
+  width: 16em;
+  height: 24em;
+  padding: 1em;
   transition-property: all;
   transition-duration: 5s;
 }
@@ -253,27 +369,6 @@ footer .copyright {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-}
-
-.cuerpoTela h2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.cuerpoTela p {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.cuerpoTela section {
-  margin: 2em;
-}
-.cuerpoTela section img {
-  width: 20em;
-  height: 25em;
-  padding: 1em;
-  transition-property: all;
-  transition-duration: 5s;
 }
 
 .cuerpoContacto {
@@ -303,24 +398,40 @@ footer .copyright {
 
 @media screen and (min-width: 500px) {
   .linksDirectos {
-    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .panuelosButton, .printsButton, .totesButton {
+    box-sizing: content-box;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    margin: 0em;
   }
-  .panuelosButton, .printsButton, .totesButton {
-    margin: 2em;
-    margin-bottom: 5em;
+  .totesButton {
+    margin-top: 2em;
+    margin-left: 0.2em;
+  }
+  .panuelosButton {
+    margin-right: 0em;
+  }
+  .printsButton {
+    margin-left: 0.5em;
   }
   .toteBagImg, .panuelosImg {
     width: 13em;
     height: 16.2em;
   }
-  .paperCatalogue, .toteCatalogue, .panueloCatalogue {
+  .serieBrote, .toteCatalogue, .panueloCatalogue, .polerasCatalogue, .serieSalitre, .serieLejos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  p, .pricesList {
+  .serieBrote img, .serieLejos img, .serieSalitre img {
+    margin: 0.3em;
+    width: 15em;
+    height: 10em;
+  }
+  p {
     font-size: 1.2em;
   }
   h1 {
@@ -337,16 +448,34 @@ footer .copyright {
     width: 15em;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 700px) {
+  .serieBrote img, .serieLejos img, .serieSalitre img {
+    margin: 0.5em;
+    width: 20em;
+    height: 13em;
+  }
+}
+@media screen and (min-width: 768px) {
   .toteBagImg, .panuelosImg {
     width: 17em;
     height: 21.2em;
   }
-  .printsImg {
-    width: 17em;
-    height: 11.3em;
+  .toteCatalogue, .panueloCatalogue, .polerasCatalogue {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
-  .paperCatalogue, .toteCatalogue, .panueloCatalogue {
+  .panuelosButton:hover {
+    background-image: url(../img/panuelosHover.jpg);
+  }
+  .totesButton:hover {
+    background-image: url(../img/toteBagsHover.jpg);
+  }
+  .printsButton:hover {
+    background-image: url(../img/printsHover.jpg);
+  }
+}
+@media screen and (min-width: 1000px) {
+  .serieBrote, .serieLejos, .serieSalitre {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
